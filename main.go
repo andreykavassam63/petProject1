@@ -1,7 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	fmt.Println("Hello World")
+	fmt.Println("🚀 petProject1 успешно на GitHub!")
+	fmt.Println("📁 Репозиторий: https://github.com/andreykavassam63/petProject1")
+
 }
