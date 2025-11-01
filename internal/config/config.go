@@ -13,7 +13,7 @@ type Config struct {
 	HTTPServer HTTPServer `yaml:"http_server" env-required:"true"`
 }
 type HTTPServer struct {
-	Addr        string        `yaml:"addr" env-required:"true"`
+	Addr        string        `yaml:"address" env-required:"true"`
 	Timeout     time.Duration `yaml:"timeout" env-default:"4s"`
 	IdleTimeout time.Duration `yaml:"idle_timeout" env-default:"60s"`
 }
@@ -33,5 +33,6 @@ func NewConfig() *Config {
 	if err := cleanenv.ReadConfig(configPath, &cfg); err != nil {
 		log.Fatalf("Cannot read config: %s", err)
 	}
+
 	return &cfg
 }

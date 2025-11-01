@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	fmt.Println("app is starting")
-	cfg := config.NewConfig()
+	cfg := config.NewConfig() //Парсим конфиг
 	fmt.Println(cfg)
+
 }
